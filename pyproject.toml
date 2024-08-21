@@ -37,7 +37,7 @@ quote-style = 'single'
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
 run = 'fastapi dev fast_zero_course/app.py'
-pre_test = 'task lint'
+pre_test = 'task lint && task format'
 test = 'pytest -s -x --cov=fast_zero_course -vv'
 post_test = 'coverage html'
 
